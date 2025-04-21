@@ -1,0 +1,20 @@
+CREATE TABLE `custom_mythic_difficulties` (
+    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `name` VARCHAR(255) NOT NULL,
+    `dungeon_health` FLOAT NOT NULL,
+    `dungeon_melee` FLOAT NOT NULL,
+    `dungeon_base_damage` FLOAT NOT NULL,
+    `dungeon_spell` FLOAT NOT NULL,
+    `dungeon_armor` FLOAT NOT NULL,
+    `dungeon_avg_level` TINYINT UNSIGNED NOT NULL,
+    `boss_health` FLOAT NOT NULL,
+    `boss_melee` FLOAT NOT NULL,
+    `boss_base_damage` FLOAT NOT NULL,
+    `boss_spell` FLOAT NOT NULL,
+    `boss_armor` FLOAT NOT NULL,
+    `boss_avg_level` TINYINT UNSIGNED NOT NULL,
+    `death_allowance` INT UNSIGNED NOT NULL,
+    `item_offset` INT UNSIGNED NOT NULL,
+    PRIMARY KEY (`id`),
+    UNIQUE KEY `name` (`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
