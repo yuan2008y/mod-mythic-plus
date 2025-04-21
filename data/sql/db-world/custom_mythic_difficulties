@@ -15,6 +15,11 @@ CREATE TABLE `custom_mythic_difficulties` (
     `boss_avg_level` TINYINT UNSIGNED NOT NULL,
     `death_allowance` INT UNSIGNED NOT NULL,
     `item_offset` INT UNSIGNED NOT NULL,
+    `difficulty_group` ENUM('basic', 'advanced', 'custom') NOT NULL DEFAULT 'custom',
+    `description` TEXT DEFAULT NULL,
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    `is_default` BOOLEAN NOT NULL DEFAULT FALSE,
     PRIMARY KEY (`id`),
     UNIQUE KEY `name` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
